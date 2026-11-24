@@ -87,7 +87,8 @@ After the engine, read the request for task signals (three **additive** categori
   `tower-defense`, `card-game`, `visual-novel`, `survival-crafting`, `puzzle`. Triggered by genre
   words ("make a roguelike", "deckbuilder").
 - **workflows** (process/shipping): `game-jam`, `prototype-fast`, `steam-publish`,
-  `itch-publish`. Triggered by process words ("publish on Steam", "vertical slice").
+  `itch-publish`, `gameboy-designer`. Triggered by process words ("publish on Steam",
+  "vertical slice", "pitch my Game Boy game").
 
 File signals sharpen this: `*.yarn`/`*.ink` → `dialogue-systems`/`visual-novel`; `steam_appid.txt`
 → `steam-publish`; `*.inputactions` → `unity-input-system`.
@@ -179,7 +180,7 @@ pointers, and state the gap.
 
 `game-jam` (jam, 48-hour, Ludum Dare/GMTK) · `prototype-fast` (vertical slice, MVP, greybox) ·
 `steam-publish` (Steam, Steamworks, depot; `steam_appid.txt`) · `itch-publish` (itch.io, butler;
-`.itch.toml`).
+`.itch.toml`) · `gameboy-designer` (Game Boy Color pitch, GB Studio concept, GBC Kickstarter).
 
 For the exhaustive per-skill trigger list and every engine binding, read
 `references/routing-table.md`.
@@ -253,6 +254,7 @@ and offer to load it if the user confirms.
 | "branching dialogue from a `.yarn` file" | (none required) | `dialogue-systems` (+ engine UI skill if an engine is detected) |
 | "how do I design save slots with migration?" | (none) | `save-systems` only |
 | "publish my game on itch with butler" | (any/none) | `itch-publish` only |
+| "pitch my Game Boy Color game idea for Kickstarter" | (none) | `gameboy-designer` (+ `prototype-fast` for the slice) |
 | "I want to make a game but don't know what to use" | unknown → ask, default Godot | router asks once; then e.g. `godot-nodes-scenes` |
 | "make hits feel punchy in my Godot game" | Godot (`project.godot`) | `game-feel` (+ `camera-systems` for shake) |
 | "the camera should follow my player smoothly" | (detected engine) | `camera-systems` (+ engine movement skill) |

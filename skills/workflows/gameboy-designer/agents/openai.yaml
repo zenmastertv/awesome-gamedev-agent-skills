@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Boy Color Designer"
+  short_description: "Pitch a Game Boy Color game for GB Studio and Kickstarter"
+  default_prompt: "Use $gameboy-designer to turn this concept into a Game Boy Color pitch."
